@@ -16,19 +16,20 @@ class Controller extends BaseController
    
     
         for($i=1; $i<=100; $i++) {
-            $val = $this->compare($i, 3, $i, 'Falabella');
-            $val = $this->compare($i, 5, $val, 'ESO');
-            print $this->compare($i, 3*5, $val, 'Integraciones')."</br>";
+            $val = $this->comparar($i, 3, $i, 'Falabella');
+            $val = $this->comparar($i, 5, $val, 'ESO');
+            print $this->comparar($i, 3*5, $val, 'Integraciones')."</br>";
         }
     }
 
-    function compare($num, $cond, $last_val, $str) {
-        if($num % $cond == 0) {
-            return $str;
+    function comparar($numero, $condicion, $valor, $string) {
+        if($numero % $condicion == 0) {
+            return $string;
         }
-        return $last_val;
+        return $valor;
     }
  
+
 
 
 
